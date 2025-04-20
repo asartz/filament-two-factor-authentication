@@ -85,7 +85,7 @@ trait TwoFactorAuthenticatable
     {
         return app(TwoFactorAuthenticationProvider::class)->qrCodeUrl(
             companyName: config('app.name'),
-            companyEmail: $this->email,
+            companyEmail: config('setapp.two_factor_authentication_column'),
             secret: decrypt($this->two_factor_secret)
         );
     }
