@@ -2,6 +2,249 @@
 
 All notable changes to `filament-two-factor-authentication` will be documented in this file.
 
+## 4.0.0 - 2026-02-09
+
+### What's Changed
+
+* Bump form-data from 4.0.2 to 4.0.4 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/92
+* Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/93
+* Bump glob from 10.4.5 to 10.5.0 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/94
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/99
+* Filament V5 Support by @andresilvagomez in https://github.com/stephenjude/filament-two-factor-authentication/pull/101
+
+### New Contributors
+
+* @andresilvagomez made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/101
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.9...4.0.0
+
+## 3.0.9 - 2025-10-13
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/91
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.8...3.0.9
+
+## 3.0.8 - 2025-09-20
+
+### What's Changed
+
+* Reactive dashboard link after verifying the code by @yhyasyrian in https://github.com/stephenjude/filament-two-factor-authentication/pull/87
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.7...3.0.8
+
+## 3.0.7 - 2025-09-18
+
+### What's Changed
+
+* Add Brazilian Portuguese language support for two-factor authentication by @Mapexss in https://github.com/stephenjude/filament-two-factor-authentication/pull/84
+* revert duplicate error message translation  by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/85
+
+### New Contributors
+
+* @Mapexss made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/84
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.6...3.0.7
+
+## 3.0.6 - 2025-09-15
+
+### What's Changed
+
+* Added Turkish Translation (Türkçe Dil Desteği Eklendi) by @engbz in https://github.com/stephenjude/filament-two-factor-authentication/pull/83
+
+### New Contributors
+
+* @engbz made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/83
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.5...3.0.6
+
+## 2.0.8 - 2025-08-22
+
+### What's Changed
+
+* [2.x] Set the intended URL before redirecting to the challenge by @ashleyshenton in https://github.com/stephenjude/filament-two-factor-authentication/pull/74
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.7...2.0.8
+
+## 3.0.5 - 2025-08-18
+
+### What's Changed
+
+* [3.x] Set the intended URL before redirecting to the challenge by @ashleyshenton in https://github.com/stephenjude/filament-two-factor-authentication/pull/81
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.4...3.0.5
+
+## 3.0.4 - 2025-08-18
+
+### What's Changed
+
+* Chore: Middleware Usage & Translation Fixes by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/80
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.3...3.0.4
+
+## 3.0.3 - 2025-08-17
+
+### What's Changed
+
+* Add constructor property promotion support for events by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/78
+* Improvements: Switch 2FA challenge from hash validation to decrypt validation and Cleanup translation usage. by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/79
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.2...3.0.3
+
+## 3.0.2 - 2025-08-17
+
+### What's Changed
+
+* Revert logout action deletion by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/77
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.1...3.0.2
+
+## 3.0.1 - 2025-08-16
+
+### What's Changed
+
+* Support Arabic language by @yhyasyrian in https://github.com/stephenjude/filament-two-factor-authentication/pull/75
+
+### New Contributors
+
+* @yhyasyrian made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/75
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/3.0.0...3.0.1
+
+## 3.0.0 - 2025-08-16
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/66
+* Filament 4.x upgrade by @broqit in https://github.com/stephenjude/filament-two-factor-authentication/pull/67
+* ref: Updated UI by @dipesh79 in https://github.com/stephenjude/filament-two-factor-authentication/pull/69
+* Fix pages with schema on Filament 4.x by @broqit in https://github.com/stephenjude/filament-two-factor-authentication/pull/70
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/stephenjude/filament-two-factor-authentication/pull/71
+* Revert "ref: Updated UI" by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/72
+* Filament V4 Support by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/73
+
+### New Contributors
+
+* @broqit made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/67
+* @dipesh79 made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/69
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.7...3.0.0
+
+## 2.0.7 - 2025-07-24
+
+### What's Changed
+
+* Fixed: blade facade class import by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/64
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.6...2.0.7
+
+## 2.0.6 - 2025-07-24
+
+### What's Changed
+
+* Register passkey auth view for only the current panel by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/63
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.5...2.0.6
+
+## 2.0.5 - 2025-06-17
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot in https://github.com/stephenjude/filament-two-factor-authentication/pull/62
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.4...2.0.5
+
+## 2.0.4 - 2025-05-28
+
+### What's Changed
+
+* Add check for current panel in ServiceProvider. by @alecritson in https://github.com/stephenjude/filament-two-factor-authentication/pull/61
+
+### New Contributors
+
+* @alecritson made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/61
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.3...2.0.4
+
+## 2.0.3 - 2025-05-24
+
+### What's Changed
+
+* Bump esbuild from 0.19.12 to 0.25.0 by @dependabot in https://github.com/stephenjude/filament-two-factor-authentication/pull/58
+* Register passkey configuration when plugin is registered and passkey enabled. by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/59
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.2...2.0.3
+
+## 2.0.2 - 2025-05-21
+
+### What's Changed
+
+* Allow passkey login to bypass the 2FA challenge. by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/57
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.1...2.0.2
+
+## 2.0.1 - 2025-05-20
+
+### What's Changed
+
+* Allow passkey login without 2fa challenge by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/55
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/2.0.0...2.0.1
+
+## 2.0.0 - 2025-05-20
+
+### What's Changed
+
+* Add Passkey Authentication & Test Coverage by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/53
+* Passkey: Automatically Register Routes & Publish Migrations by @stephenjude in https://github.com/stephenjude/filament-two-factor-authentication/pull/54
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/1.0.0...2.0.0
+
+## 0.0.27 - 2025-05-07
+
+### What's Changed
+
+* Login through recovery code by @talha-abdullah-990 in https://github.com/stephenjude/filament-two-factor-authentication/pull/51
+
+### New Contributors
+
+* @talha-abdullah-990 made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/51
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/0.0.26...0.0.27
+
+## 0.0.26 - 2025-05-04
+
+### What's Changed
+
+* Fix #47 by @RChutchev in https://github.com/stephenjude/filament-two-factor-authentication/pull/48
+
+### New Contributors
+
+* @RChutchev made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/48
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/0.0.25...0.0.26
+
+## 0.0.25 - 2025-04-29
+
+### What's Changed
+
+* Fix generating new recovery codes by @GrameJunior in https://github.com/stephenjude/filament-two-factor-authentication/pull/45
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/0.0.24...0.0.25
+
+## 0.0.24 - 2025-04-29
+
+### What's Changed
+
+* Add German translations by @GrameJunior in https://github.com/stephenjude/filament-two-factor-authentication/pull/46
+
+### New Contributors
+
+* @GrameJunior made their first contribution in https://github.com/stephenjude/filament-two-factor-authentication/pull/46
+
+**Full Changelog**: https://github.com/stephenjude/filament-two-factor-authentication/compare/0.0.23...0.0.24
+
 ## 0.0.23 - 2025-04-16
 
 ### What's Changed

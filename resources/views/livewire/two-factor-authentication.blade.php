@@ -8,41 +8,14 @@
             {{__('filament-two-factor-authentication::section.description')}}
         </x-slot>
 
-        <div class="">
-            @if($this->isConfirmingSetup)
-                <x-filament-two-factor-authentication::setup-confirmation />
-            @elseif($this->enableTwoFactorAuthentication->isVisible())
-                <x-filament-two-factor-authentication::enable />
-            @elseif($this->disableTwoFactorAuthentication->isVisible())
-                <x-filament-two-factor-authentication::enabled />
+        <div class="fi-sc-form space-y-6">
+            {{ $this->setupTwoFactorAuthenticationForm }}
 
-                @if($this->showRecoveryCodes)
-                    <x-filament-two-factor-authentication::recovery-codes />
-                @endif
+            {{ $this->enableTwoFactorAuthenticationForm }}
 
-                {{$this->generateNewRecoveryCodes}}
-
-                {{$this->disableTwoFactorAuthentication}}
-            @endif
+            {{ $this->disableTwoFactorAuthenticationForm }}
         </div>
     </x-filament::section>
 
     <x-filament-actions::modals />
-
-    @if(str(url()->current())->contains('two-factor-setup'))
-        @if(!filament('filament-two-factor-authentication')->hasEnforcedTwoFactorSetup() || filament()->auth()->user()?->hasEnabledTwoFactorAuthentication())
-            <div class="my-4 text-center">
-                <x-filament::link :href="filament()->getCurrentPanel()->getUrl(filament()->getTenant())"
-                                  weight="semibold">
-                    {{__('filament-two-factor-authentication::section.dashboard')}}
-                </x-filament::link>
-            </div>
-        @endif
-
-        @if($this->enableTwoFactorAuthentication->isVisible())
-            <div class="my-4 text-center">
-                <x-filament-two-factor-authentication::logout />
-            </div>
-        @endif
-    @endif
 </div>

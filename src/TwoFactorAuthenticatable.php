@@ -8,11 +8,14 @@ use BaconQrCode\Renderer\ImageRenderer;
 use BaconQrCode\Renderer\RendererStyle\Fill;
 use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 use BaconQrCode\Writer;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Cache;
+use Spatie\LaravelPasskeys\Models\Concerns\InteractsWithPasskeys;
 use Stephenjude\FilamentTwoFactorAuthentication\Events\RecoveryCodeReplaced;
 
 trait TwoFactorAuthenticatable
 {
+    use InteractsWithPasskeys;
+
     /**
      * Determine if two-factor authentication has been enabled.
      */
@@ -22,19 +25,34 @@ trait TwoFactorAuthenticatable
             ! is_null($this->two_factor_confirmed_at);
     }
 
+    public function hasEnabledPasskeyAuthentication(): bool
+    {
+        return $this?->passkeys()?->exists();
+    }
+
+    public function passkeyAuthenticated(): bool
+    {
+        $passkeyAuthenticated = Cache::pull("passkey::auth::$this->id", false);
+
+        if ($passkeyAuthenticated && $this->hasEnabledTwoFactorAuthentication()) {
+            $this->setTwoFactorChallengePassed();
+        }
+
+        return $passkeyAuthenticated;
+    }
+
     public function isTwoFactorChallengePassed(): bool
     {
-        $sessionKey = 'login_2fa_challenge_passed_' . $this->id;
+        if ($twoFactorSecretFromSession = session()->get("login:challenge:secret:$this->id")) {
+            return decrypt($this->two_factor_secret) === decrypt($twoFactorSecretFromSession);
+        }
 
-        return Hash::check($this->two_factor_secret, session()->get($sessionKey));
+        return false;
     }
 
     public function setTwoFactorChallengePassed(): void
     {
-        $sessionKey = 'login_2fa_challenge_passed_' . $this->id;
-        $sessionValue = Hash::make($this->two_factor_secret);
-
-        session()->put($sessionKey, $sessionValue);
+        session()->put("login:challenge:secret:$this->id", $this->two_factor_secret);
     }
 
     /**

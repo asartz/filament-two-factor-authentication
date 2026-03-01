@@ -5,7 +5,7 @@ namespace Stephenjude\FilamentTwoFactorAuthentication\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class EnforceTwoFactorSetup
+class ForceTwoFactorSetup
 {
     public function handle(Request $request, Closure $next): mixed
     {
@@ -24,7 +24,7 @@ class EnforceTwoFactorSetup
 
     protected function redirectTo(): ?string
     {
-        return filament()->getCurrentPanel()?->route(
+        return filament()->getCurrentOrDefaultPanel()?->route(
             'two-factor.setup'
         );
     }

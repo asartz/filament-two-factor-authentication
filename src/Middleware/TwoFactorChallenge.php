@@ -5,7 +5,7 @@ namespace Stephenjude\FilamentTwoFactorAuthentication\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class ChallengeTwoFactor
+class TwoFactorChallenge
 {
     public function handle(Request $request, Closure $next): mixed
     {
@@ -15,18 +15,18 @@ class ChallengeTwoFactor
             return $next($request);
         }
 
-        if ($user?->hasEnabledTwoFactorAuthentication() && ! $user?->isTwoFactorChallengePassed()) {
-            return redirect()->to($this->redirectTo());
+        if ($user?->hasEnabledTwoFactorAuthentication() &&
+            ! $user?->isTwoFactorChallengePassed() &&
+            ! $user?->passkeyAuthenticated()
+        ) {
+            return redirect()->guest($this->twoFactorChallengeRoute());
         }
 
         return $next($request);
-
     }
 
-    protected function redirectTo(): ?string
+    protected function twoFactorChallengeRoute(): ?string
     {
-        return filament()->getCurrentPanel()?->route(
-            'two-factor.challenge'
-        );
+        return filament()->getCurrentOrDefaultPanel()?->route('two-factor.challenge');
     }
 }
